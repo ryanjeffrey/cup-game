@@ -18,11 +18,24 @@ main {
 
 #cups {
     margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .cup {
     height: 300px;
     padding: 0 40px;
+    z-index: 10;
+}
+
+#ball {
+    height: 100px;
+    z-index: 0;
+    display: flex;
+    margin-top: -110px;
+    margin-right: auto;
+    margin-left: auto;
+    grid-column: 2;
 }
 
 #guess-buttons {
@@ -33,3 +46,4 @@ main {
     padding: 10px;
     margin: 0 125px;
 }
+
