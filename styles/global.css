@@ -37,6 +37,10 @@ span {
     z-index: 10;
 }
 
+#cup-one, #cup-two, #cup-three {
+    transition: all 1.2s ease-out;
+}
+
 #ball {
     height: 100px;
     z-index: 0;
