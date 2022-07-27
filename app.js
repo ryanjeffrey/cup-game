@@ -31,6 +31,24 @@ const hidingPlaces = ['cupOne', 'cupTwo', 'cupThree'];
 console.log(hidingPlaces);
 
 // set event listeners 
+guessButtonOneEl.addEventListener('click', () => {
+    const hidingSpot = Math.floor(Math.random() * hidingPlaces.length);
+    const answer = hidingPlaces[hidingSpot];
+    console.log(answer);
+});
+
+guessButtonTwoEl.addEventListener('click', () => {
+    const hidingSpot = Math.floor(Math.random() * hidingPlaces.length);
+    const answer = hidingPlaces[hidingSpot];
+    console.log(answer);
+});
+
+guessButtonThreeEl.addEventListener('click', () => {
+    const hidingSpot = Math.floor(Math.random() * hidingPlaces.length);
+    const answer = hidingPlaces[hidingSpot];
+    console.log(answer);
+});
+
   // get user input
   // use user input to update state 
   // update DOM to reflect the new state
