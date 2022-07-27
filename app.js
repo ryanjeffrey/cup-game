@@ -67,7 +67,10 @@ function handleGuess(userGuess, correctSpot) {
         incorrectGuesses++;
     }
 
+    // update DOM to reflect the new state
+    correctGuessesEl.textContent = correctGuesses;
+    incorrectGuessesEl.textContent = incorrectGuesses;
+    totalGuessesEl.textContent = totalGuesses;
+
     console.log(userGuess, correctSpot, ballEl.style.gridColumn);
 }
-  // use user input to update state 
-  // update DOM to reflect the new state
