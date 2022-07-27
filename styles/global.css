@@ -7,29 +7,77 @@
 body {
     height: 100vh;
     font-family: 'Rubik', san-serif;
-    background: var(--background);
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    display: flex;
-    align-items: center;
-    background-color: var(--header-background);
 }
 
 main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+p {
+    margin: 12px;
+}
+
+span {
+    font-size: 20px;
+    padding-bottom: 12px;
+}
+
+#cups {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cup {
+    height: 300px;
+    padding: 0 44px;
+    z-index: 10;
+}
+
+#cup-one, #cup-two, #cup-three {
+    transition: all 1.2s ease-out;
+}
+
+#ball {
+    height: 100px;
+    z-index: 0;
+    display: flex;
+    margin-top: -110px;
+    margin-right: auto;
+    margin-left: auto;
+    grid-column: 2;
+}
+
+#guess-buttons {
     padding: 20px;
 }
 
-footer {
-    position: sticky;
-    bottom: 0;
-    padding: 7px 20px;
-    font-size: .8em;
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--footer-background);
+#guess-buttons button {
+    padding: 10px;
+    margin: 0 125px;
 }
+
+#scoreboard {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* background-color: red; */
+    text-align: center;
+    font-size: 12px;
+}
+
+#correct, #incorrect, #total {
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#scoreboard-title {
+    margin-top: 4px;
+}
+
