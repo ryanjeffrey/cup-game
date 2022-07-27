@@ -67,10 +67,13 @@ function handleGuess(userGuess, correctSpot) {
 
     if (correctSpot === 'one'){
         ballEl.style.gridColumn = '1';
+        cupOneEl.style.marginTop = '-120px';
     } else if (correctSpot === 'two'){
         ballEl.style.gridColumn = '2';
+        cupTwoEl.style.marginTop = '-120px';
     } else if (correctSpot === 'three'){
         ballEl.style.gridColumn = '3';
+        cupThreeEl.style.marginTop = '-120px';
     }
 
     if (userGuess === correctSpot) {
