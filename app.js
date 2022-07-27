@@ -23,6 +23,9 @@ const resetButtonEl = document.getElementById('reset-button');
 console.log(playAgainButtonEl, scoreboardEl, correctGuessesEl, incorrectGuessesEl, totalGuessesEl, resetButtonEl);
 
 // let state
+let correctGuesses = 0;
+let incorrectGuesses = 0;
+let totalGuesses = 0;
 
 // set event listeners 
   // get user input
