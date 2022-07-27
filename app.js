@@ -37,18 +37,21 @@ guessButtonOneEl.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * hidingPlaces.length);
     const answer = hidingPlaces[hidingSpot];
     handleGuess('one', answer);
+    toggleButtons();
 });
 
 guessButtonTwoEl.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * hidingPlaces.length);
     const answer = hidingPlaces[hidingSpot];
     handleGuess('two', answer);
+    toggleButtons();
 });
 
 guessButtonThreeEl.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * hidingPlaces.length);
     const answer = hidingPlaces[hidingSpot];
     handleGuess('three', answer);
+    toggleButtons();
 });
 
   // get user input
@@ -75,4 +78,18 @@ function handleGuess(userGuess, correctSpot) {
     totalGuessesEl.textContent = totalGuesses;
 
     console.log(userGuess, correctSpot, ballEl.style.gridColumn);
+}
+
+function toggleButtons() {
+    if (playAgainButtonEl.disabled === false) {
+        playAgainButtonEl.disabled = true;
+        guessButtonOneEl.disabled = false;
+        guessButtonTwoEl.disabled = false;
+        guessButtonThreeEl.disabled = false;
+    } else {
+        playAgainButtonEl.disabled = false;
+        guessButtonOneEl.disabled = true;
+        guessButtonTwoEl.disabled = true;
+        guessButtonThreeEl.disabled = true;
+    }
 }
