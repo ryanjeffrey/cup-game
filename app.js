@@ -27,28 +27,47 @@ let correctGuesses = 0;
 let incorrectGuesses = 0;
 let totalGuesses = 0;
 
-const hidingPlaces = ['cupOne', 'cupTwo', 'cupThree'];
+const hidingPlaces = ['one', 'two', 'three'];
 console.log(hidingPlaces);
 
 // set event listeners 
 guessButtonOneEl.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * hidingPlaces.length);
     const answer = hidingPlaces[hidingSpot];
-    console.log(answer);
+    handleGuess('one', answer);
 });
 
 guessButtonTwoEl.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * hidingPlaces.length);
     const answer = hidingPlaces[hidingSpot];
-    console.log(answer);
+    handleGuess('two', answer);
 });
 
 guessButtonThreeEl.addEventListener('click', () => {
     const hidingSpot = Math.floor(Math.random() * hidingPlaces.length);
     const answer = hidingPlaces[hidingSpot];
-    console.log(answer);
+    handleGuess('three', answer);
 });
 
   // get user input
+function handleGuess(userGuess, correctSpot) {
+    totalGuesses++;
+
+    if (correctSpot === 'one'){
+        ballEl.style.gridColumn = '1';
+    } else if (correctSpot === 'two'){
+        ballEl.style.gridColumn = '2';
+    } else if (correctSpot === 'three'){
+        ballEl.style.gridColumn = '3';
+    }
+
+    if (userGuess === correctSpot) {
+        correctGuesses++;
+    } else {
+        incorrectGuesses++;
+    }
+
+    console.log(userGuess, correctSpot, ballEl.style.gridColumn);
+}
   // use user input to update state 
   // update DOM to reflect the new state
