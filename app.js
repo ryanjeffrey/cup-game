@@ -54,6 +54,13 @@ guessButtonThreeEl.addEventListener('click', () => {
     toggleButtons();
 });
 
+playAgainButtonEl.addEventListener('click', () => {
+    playAgainButtonEl.disabled = true;
+    guessButtonOneEl.disabled = false;
+    guessButtonTwoEl.disabled = false;
+    guessButtonThreeEl.disabled = false;
+});
+
   // get user input
 function handleGuess(userGuess, correctSpot) {
     totalGuesses++;
