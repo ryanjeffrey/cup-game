@@ -3,24 +3,18 @@ const cupOneEl = document.getElementById('cup-one');
 const cupTwoEl = document.getElementById('cup-two');
 const cupThreeEl = document.getElementById('cup-three');
 
-console.log(cupOneEl, cupTwoEl, cupThreeEl);
-
 const ballEl = document.getElementById('ball');
 
 const guessButtonOneEl = document.getElementById('guess-button-one');
 const guessButtonTwoEl = document.getElementById('guess-button-two');
 const guessButtonThreeEl = document.getElementById('guess-button-three');
 
-console.log(ballEl, guessButtonOneEl, guessButtonTwoEl, guessButtonThreeEl);
-
 const playAgainButtonEl = document.getElementById('play-again-button');
-const scoreboardEl = document.getElementById('scoreboard');
 const correctGuessesEl = document.getElementById('correct-guesses');
 const incorrectGuessesEl = document.getElementById('incorrect-guesses');
 const totalGuessesEl = document.getElementById('total-guesses');
 const resetButtonEl = document.getElementById('reset-button');
 
-console.log(playAgainButtonEl, scoreboardEl, correctGuessesEl, incorrectGuessesEl, totalGuessesEl, resetButtonEl);
 
 // let state
 let correctGuesses = 0;
@@ -30,7 +24,6 @@ let totalGuesses = 0;
 playAgainButtonEl.disabled = true;
 
 const hidingPlaces = ['one', 'two', 'three'];
-console.log(hidingPlaces);
 
 // set event listeners 
 guessButtonOneEl.addEventListener('click', () => {
@@ -65,7 +58,7 @@ playAgainButtonEl.addEventListener('click', () => {
 resetButtonEl.addEventListener('click', () => {
     resetScoreboard();
     resetCups();
-    
+
     playAgainButtonEl.disabled = true;
     guessButtonOneEl.disabled = false;
     guessButtonTwoEl.disabled = false;
@@ -97,8 +90,6 @@ function handleGuess(userGuess, correctSpot) {
     correctGuessesEl.textContent = correctGuesses;
     incorrectGuessesEl.textContent = incorrectGuesses;
     totalGuessesEl.textContent = totalGuesses;
-
-    console.log(userGuess, correctSpot, ballEl.style.gridColumn);
 }
 
 function toggleButtons() {
