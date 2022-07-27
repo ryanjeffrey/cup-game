@@ -62,6 +62,16 @@ playAgainButtonEl.addEventListener('click', () => {
     resetCups();
 });
 
+resetButtonEl.addEventListener('click', () => {
+    resetScoreboard();
+    resetCups();
+    
+    playAgainButtonEl.disabled = true;
+    guessButtonOneEl.disabled = false;
+    guessButtonTwoEl.disabled = false;
+    guessButtonThreeEl.disabled = false;
+});
+
   // get user input
 function handleGuess(userGuess, correctSpot) {
     totalGuesses++;
@@ -109,4 +119,14 @@ function resetCups() {
     cupOneEl.style.marginTop = '0';
     cupTwoEl.style.marginTop = '0';
     cupThreeEl.style.marginTop = '0';
+}
+
+function resetScoreboard() {
+    correctGuesses = 0;
+    incorrectGuesses = 0;
+    totalGuesses = 0;
+
+    correctGuessesEl.textContent = correctGuesses;
+    incorrectGuessesEl.textContent = incorrectGuesses;
+    totalGuessesEl.textContent = totalGuesses;
 }
