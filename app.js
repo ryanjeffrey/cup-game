@@ -27,6 +27,9 @@ let correctGuesses = 0;
 let incorrectGuesses = 0;
 let totalGuesses = 0;
 
+const hidingPlaces = ['cupOne', 'cupTwo', 'cupThree'];
+console.log(hidingPlaces);
+
 // set event listeners 
   // get user input
   // use user input to update state 
