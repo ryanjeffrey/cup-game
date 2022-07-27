@@ -59,6 +59,7 @@ playAgainButtonEl.addEventListener('click', () => {
     guessButtonOneEl.disabled = false;
     guessButtonTwoEl.disabled = false;
     guessButtonThreeEl.disabled = false;
+    resetCups();
 });
 
   // get user input
@@ -102,4 +103,10 @@ function toggleButtons() {
         guessButtonTwoEl.disabled = true;
         guessButtonThreeEl.disabled = true;
     }
+}
+
+function resetCups() {
+    cupOneEl.style.marginTop = '0';
+    cupTwoEl.style.marginTop = '0';
+    cupThreeEl.style.marginTop = '0';
 }
