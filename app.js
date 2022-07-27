@@ -27,6 +27,8 @@ let correctGuesses = 0;
 let incorrectGuesses = 0;
 let totalGuesses = 0;
 
+playAgainButtonEl.disabled = true;
+
 const hidingPlaces = ['one', 'two', 'three'];
 console.log(hidingPlaces);
 
